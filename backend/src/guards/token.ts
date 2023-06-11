@@ -10,7 +10,7 @@ export interface AuthJwtPayload extends JwtPayload {
 }
 
 @Injectable()
-class JwtStrategy extends PassportStrategy(Strategy) {
+class JwtStrategy extends PassportStrategy(Strategy, 'jwt') {
   constructor(private readonly configService: ConfigService) {
     super({
       jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
