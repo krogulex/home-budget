@@ -1,0 +1,28 @@
+version: "3.9"
+
+services:
+  postgres:
+    container_name: postgres
+    restart: unless-stopped
+    env_file:
+      - .db.env
+    environment:
+      - NODE_ENV=dev
+    volumes:
+      - /data/postgres:/data/postgres
+    image: "postgres:15.2-alpine"
+    ports:
+      - "5432:5432"
+    networks:
+      - home-budget
+
+#TODO:
+#  backend:
+#    container_name: backend
+
+#TODO:
+#  frontend:
+#    container_name: frontend
+
+networks:
+  home-budget:
