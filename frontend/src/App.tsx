@@ -7,8 +7,8 @@ import HomePage from "./Pages/Home";
 import RegistrationPage from "./Pages/Registration";
 import LoginPage from "./Pages/Login";
 import ProductPage from "./Pages/Product";
-import DashboardPage from "./Pages/DashboardPage";
-import NotFoundPage from "./Pages/NotFoundPage";
+import DashboardPage from "./Pages/Dashboard";
+import NotFoundPage from "./Pages/NotFound";
 
 interface AppProps {}
 

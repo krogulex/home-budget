@@ -9,10 +9,10 @@ const HomePage: FunctionComponent<HomePageProps> = () => {
     <div>
       <h1>Homepage</h1>
       <NavLink to="/login">
-      <button>Login in</button>
+        <button>Login in</button>
       </NavLink>
-      <NavLink to="/register">
-      <button>Sign up</button>
+      <NavLink to="/registration">
+        <button>Sign up</button>
       </NavLink>
     </div>
   );
