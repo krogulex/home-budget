@@ -1,20 +1,24 @@
-import React from "react";
-import { FunctionComponent } from "react";
-import { NavLink } from "react-router-dom";
+import { CSSProperties, FunctionComponent } from 'react';
+import { NavLink } from 'react-router-dom';
 
-interface HomePageProps {}
+//components
+import AuthForm from '@components/AuthForm';
+import Wrapper from '@components/Wrapper';
 
-const HomePage: FunctionComponent<HomePageProps> = () => {
+//components mui
+import { Button } from '@mui/material';
+
+const HomePage: FunctionComponent = () => {
   return (
-    <div>
-      <h1>Homepage</h1>
-      <NavLink to="/login">
-        <button>Login in</button>
-      </NavLink>
-      <NavLink to="/registration">
-        <button>Sign up</button>
-      </NavLink>
-    </div>
+    <Wrapper>
+      <AuthForm />
+      <div>
+        <legend style={{ marginBottom: '10px' }}>Lub zarejestruj się</legend>
+        <NavLink to="/registration">
+          <Button variant="contained">Załóż konto</Button>
+        </NavLink>
+      </div>
+    </Wrapper>
   );
 };
 
