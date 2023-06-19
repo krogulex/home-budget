@@ -56,6 +56,7 @@ export const TextInput: FC<TextInputProps> = ({
         placeholder={placeholder}
         type={type}
         error={!!errors[name as keyof FormData]?.message}
+        style={{ margin: '10px' }}
       />
     )}
   />
