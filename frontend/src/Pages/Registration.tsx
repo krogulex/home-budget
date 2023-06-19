@@ -1,10 +1,14 @@
-import React from "react";
-import { FunctionComponent } from "react";
+import { FunctionComponent } from 'react';
 
-interface RegistrationPageProps {}
+import AuthForm from '@components/AuthForm';
+import Wrapper from '@components/Wrapper';
 
-const RegistrationPage: FunctionComponent<RegistrationPageProps> = () => {
-  return <div>Registration page</div>;
+const RegistrationPage: FunctionComponent = () => {
+  return (
+    <Wrapper>
+      <AuthForm isRegistration />
+    </Wrapper>
+  );
 };
 
 export default RegistrationPage;
