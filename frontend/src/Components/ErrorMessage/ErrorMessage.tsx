@@ -12,7 +12,7 @@ export const ErrorMessage: FC<ErrorMessageProps> = ({
   return (
     <>
       {condition && (
-        <p style={{ color: 'red' }} role="alert">
+        <p style={{ margin: '10px', color: 'red' }} role="alert">
           {errorMessage}
         </p>
       )}
