@@ -1,21 +1,15 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 
 type ErrorMessageProps = {
   errorMessage: string;
-  condition: boolean;
 };
 
-export const ErrorMessage: FC<ErrorMessageProps> = ({
-  errorMessage,
-  condition,
-}) => {
+export const ErrorMessage: FC<ErrorMessageProps> = ({ errorMessage }) => {
   return (
     <>
-      {condition && (
-        <p style={{ margin: '10px', color: 'red' }} role="alert">
-          {errorMessage}
-        </p>
-      )}
+      <p style={{ margin: '10px', color: 'red' }} role="alert">
+        {errorMessage}
+      </p>
     </>
   );
 };
