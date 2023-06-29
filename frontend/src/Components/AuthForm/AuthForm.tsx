@@ -87,15 +87,13 @@ export const AuthForm: FC<AuthFormProps> = ({ isRegistration }) => {
           type="email"
         />
 
-        <ErrorMessage
-          errorMessage="Pole wymagane"
-          condition={errors.email?.type === 'required'}
-        />
+        {errors.email?.type === 'required' && (
+          <ErrorMessage errorMessage="Pole wymagane" />
+        )}
 
-        <ErrorMessage
-          errorMessage="Nieprawidłowy format adresu e-mail"
-          condition={errors.email?.type === 'pattern'}
-        />
+        {errors.email?.type === 'pattern' && (
+          <ErrorMessage errorMessage="Nieprawidłowy format adresu e-mail" />
+        )}
 
         {isRegistration && (
           <>
@@ -114,17 +112,13 @@ export const AuthForm: FC<AuthFormProps> = ({ isRegistration }) => {
               type="email"
             />
 
-            <ErrorMessage
-              errorMessage="Pole wymagane"
-              condition={errors.emailConfirmation?.type === 'required'}
-            />
+            {errors.emailConfirmation?.type === 'required' && (
+              <ErrorMessage errorMessage="Pole wymagane" />
+            )}
 
-            <ErrorMessage
-              errorMessage="Adresy e-mail nie są identyczne"
-              condition={
-                errors.emailConfirmation?.type === 'isEmailConfirmationValid'
-              }
-            />
+            {errors.emailConfirmation?.type === 'isEmailConfirmationValid' && (
+              <ErrorMessage errorMessage="Adresy e-mail nie są identyczne" />
+            )}
           </>
         )}
 
@@ -137,15 +131,13 @@ export const AuthForm: FC<AuthFormProps> = ({ isRegistration }) => {
           type="password"
         />
 
-        <ErrorMessage
-          errorMessage="Pole wymagane"
-          condition={errors.password?.type === 'required'}
-        />
+        {errors.password?.type === 'required' && (
+          <ErrorMessage errorMessage="Pole wymagane" />
+        )}
 
-        <ErrorMessage
-          errorMessage="Minimalna długość hasła wynosi 4 znaki"
-          condition={errors.password?.type === 'minLength'}
-        />
+        {errors.password?.type === 'minLength' && (
+          <ErrorMessage errorMessage="Minimalna długość hasła wynosi 4 znaki" />
+        )}
 
         {isRegistration && (
           <>
@@ -164,18 +156,14 @@ export const AuthForm: FC<AuthFormProps> = ({ isRegistration }) => {
               type="password"
             />
 
-            <ErrorMessage
-              errorMessage="Pole wymagane"
-              condition={errors.passwordConfirmation?.type === 'required'}
-            />
+            {errors.passwordConfirmation?.type === 'required' && (
+              <ErrorMessage errorMessage="Pole wymagane" />
+            )}
 
-            <ErrorMessage
-              errorMessage="Hasła nie są identyczne"
-              condition={
-                errors.passwordConfirmation?.type ===
-                'isPasswordConfirmationValid'
-              }
-            />
+            {errors.passwordConfirmation?.type ===
+              'isPasswordConfirmationValid' && (
+              <ErrorMessage errorMessage="Hasła nie są identyczne" />
+            )}
           </>
         )}
 
